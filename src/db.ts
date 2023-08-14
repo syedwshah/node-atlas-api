@@ -8,7 +8,6 @@ const uri = process.env.MONGODB_URI || '' // Use the MONGODB_URI from .env
 
 const connectDB = async () => {
   try {
-    console.log('MONGODB_URI:', uri)
     await mongoose.connect(uri)
     console.log('Connected to MongoDB')
   } catch (error) {
