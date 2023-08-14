@@ -4,7 +4,6 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'prettier',
-    'plugin:import/typescript'
   ],
   rules: {
     semi: 'off',
