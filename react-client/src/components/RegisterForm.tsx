@@ -44,22 +44,19 @@ const RegisterForm = () => {
         body: JSON.stringify({ email, password }),
       });
 
-      if (response.ok) {
-        const data = await response.json(); // Parse the response JSON
+      const data = await response.json(); // Parse the response JSON
 
-        const token = data.token; // Get the token from the response JSON
+      const token = data.token; // Get the token from the response JSON
 
-        if (token) {
-          handleJWT(token);
-          // Redirect or perform other actions after successful registration
-        } else {
-          console.error('No token found in response');
-        }
+      if (token) {
+        handleJWT(token);
+        // Redirect or perform other actions after successful registration
       } else {
-        console.error('Error registering user');
+        console.error('No token found in response');
       }
+   
     } catch (error) {
-      console.error('An error occurred:', error);
+      console.error('Error registering user: ', error);
     }
   };
 

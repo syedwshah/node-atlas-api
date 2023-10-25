@@ -8,9 +8,6 @@ module.exports = {
   rules: {
     semi: 'off',
     '@typescript-eslint/semi': ['error', 'never'],
-    'import/order': ['error', { 'newlines-between': 'always' }],
-    'import/no-unresolved': ['error', { commonjs: true, caseSensitive: true }],
-    'import/extensions': ['error', 'always', { ignorePackages: true, js: 'never', ts: 'never' }],
     // ... other rules
   },
   settings: {
